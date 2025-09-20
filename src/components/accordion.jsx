@@ -22,12 +22,17 @@ function Accordion() {
     console.log(selected);
     return (
         <div className='flex h-screen w-screen flex-col items-center justify-center gap-5 '>
-            <button onClick={() => setenablemultiselection(!enablemultiselection)} className='bg-[#614101] '>Enable Multi Selection</button>
+            <button onClick={() => setenablemultiselection (!enablemultiselection)} className='bg-[#614101] '>Enable Multi Selection</button>
             <div className='w-[500px]'>
                 {
                     data && data.length > 0 ?
                         data.map(DataItem => <div className='mb-2.5 bg-[#614101] px-5 py-2.5'>
-                            <div onClick={enablemultiselection ? () => handleMultiselection(DataItem.id) : () => handleSingleSelection(DataItem.id)} className="text-white flex justify-between item-center cursor-pointer">
+
+                            <div onClick={enablemultiselection ? 
+                                () => handleMultiselection(DataItem.id) : 
+                                () => handleSingleSelection(DataItem.id)} 
+
+                                className="text-white flex justify-between item-center cursor-pointer">
                                 <h3>{DataItem.question}</h3>
                                 <span>+</span>
                             </div>
