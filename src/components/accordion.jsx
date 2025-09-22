@@ -38,6 +38,7 @@ function Accordion() {
     const handleSingleSelection = (getCurrentId) => {
         setselected(getCurrentId === selected ? null : getCurrentId)
     }
+   
 
 
     return (
